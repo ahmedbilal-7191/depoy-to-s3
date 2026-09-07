@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CloudNova - S3 and CloudFront static website demo">
+  <title>CloudNova | Build. Deploy. Scale.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="bg-grid"></div>
+  <header class="header">
+    <a class="logo" href="#home"><span class="logo-mark">☁</span> CloudNova</a>
+    <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+    <nav id="nav">
+      <a class="active" href="#home">Home</a>
+      <a href="#architecture">Architecture</a>
+      <a href="#features">Features</a>
+      <a href="#pipeline">Pipeline</a>
+      <a href="#about">About</a>
+    </nav>
+    <a class="demo-btn" href="#architecture">◉ Live Demo</a>
+  </header>
+
+  <main>
+    <section id="home" class="hero section">
+      <div class="hero-copy reveal">
+        <div class="eyebrow">🚀 Static Website Hosting on AWS</div>
+        <h1>BUILD. <span>DEPLOY.</span> <strong>SCALE.</strong></h1>
+        <h2>Cloud infrastructure, engineered for speed.</h2>
+        <p>This demo website is hosted on Amazon S3 and delivered globally through Amazon CloudFront — showcasing a modern, secure and highly available static web architecture.</p>
+        <div class="actions">
+          <a class="primary-btn" href="#features">▶ Explore Infrastructure</a>
+          <a class="secondary-btn" href="#architecture">⌘ View Architecture</a>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal">
+        <div class="orbit">
+          <div class="globe">◎</div>
+          <div class="orbit-dot dot1"></div>
+          <div class="orbit-dot dot2"></div>
+          <div class="orbit-dot dot3"></div>
+        </div>
+        <div class="flow">
+          <div class="node browser"><span>◫</span><b>Your Browser</b></div>
+          <i>→</i>
+          <div class="node cf"><span>◉</span><b>CloudFront</b><small>CDN + HTTPS</small></div>
+          <i>→</i>
+          <div class="node s3"><span>▱</span><b>S3</b><small>Static Website</small></div>
+        </div>
+        <div class="global-label">GLOBAL CDN<br>FOR FASTER DELIVERY</div>
+      </div>
+    </section>
+
+    <section class="stats">
+      <div><span>◉</span><b>99.99%</b><small>Uptime</small></div>
+      <div><span>ϟ</span><b>&lt; 50ms</b><small>Edge Latency</small></div>
+      <div><span>◎</span><b>15+</b><small>Global Regions</small></div>
+      <div><span>◷</span><b>24/7</b><small>Monitoring</small></div>
+    </section>
+
+    <section id="architecture" class="section architecture">
+      <div class="section-heading reveal">
+        <div class="eyebrow">☁ ARCHITECTURE</div>
+        <h2>Simple. Secure. <span>Scalable.</span></h2>
+        <p>Every request follows a clean path from the user to CloudFront and finally to the S3 origin.</p>
+      </div>
+      <div class="architecture-card reveal">
+        <div class="arch-step">
+          <div class="icon">🌐</div>
+          <h3>User</h3><p>Browser request</p>
+        </div>
+        <div class="connector"><span></span>→</div>
+        <div class="arch-step highlight">
+          <div class="icon">◉</div>
+          <h3>CloudFront</h3><p>CDN + HTTPS + Cache</p>
+        </div>
+        <div class="connector"><span></span>→</div>
+        <div class="arch-step">
+          <div class="icon">▱</div>
+          <h3>Amazon S3</h3><p>Static origin</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="section features">
+      <div class="section-heading reveal">
+        <div class="eyebrow">KEY FEATURES</div>
+        <h2>Why S3 + CloudFront?</h2>
+        <p>A powerful combination for hosting static sites with performance, security and scalability.</p>
+      </div>
+      <div class="feature-grid">
+        <article class="feature reveal"><div>ϟ</div><h3>Global Delivery</h3><p>CloudFront edge locations deliver content closer to your users.</p></article>
+        <article class="feature reveal"><div>◇</div><h3>Secure by Default</h3><p>Use HTTPS with AWS Certificate Manager and a private S3 origin.</p></article>
+        <article class="feature reveal"><div>▤</div><h3>Highly Durable</h3><p>Amazon S3 provides extremely high durability for static assets.</p></article>
+        <article class="feature reveal"><div>＄</div><h3>Cost Efficient</h3><p>Pay for the storage and requests your website actually uses.</p></article>
+        <article class="feature reveal"><div>⛶</div><h3>Scales Automatically</h3><p>CloudFront handles traffic spikes without managing web servers.</p></article>
+        <article class="feature reveal"><div>⌘</div><h3>DevOps Ready</h3><p>Connect GitHub Actions to automate S3 uploads and CloudFront invalidations.</p></article>
+      </div>
+    </section>
+
+    <section id="pipeline" class="section pipeline">
+      <div class="section-heading reveal">
+        <div class="eyebrow">DEPLOYMENT PIPELINE</div>
+        <h2>From Code to <span>Live</span></h2>
+        <p>Click the button to watch a simulated deployment flow.</p>
+      </div>
+      <div class="pipeline-track">
+        <div class="pipe-step"><b>1</b><span>◆</span><h3>Git Push</h3><small>Code changes</small></div>
+        <em>→</em>
+        <div class="pipe-step"><b>2</b><span>⚙</span><h3>Build</h3><small>Compile & bundle</small></div>
+        <em>→</em>
+        <div class="pipe-step"><b>3</b><span>✓</span><h3>Test</h3><small>Run tests</small></div>
+        <em>→</em>
+        <div class="pipe-step"><b>4</b><span>▱</span><h3>Upload to S3</h3><small>Store static files</small></div>
+        <em>→</em>
+        <div class="pipe-step"><b>5</b><span>◉</span><h3>CloudFront</h3><small>Invalidate cache</small></div>
+        <em>→</em>
+        <div class="pipe-step live"><b>6</b><span>✓</span><h3>LIVE</h3><small>Your site is live!</small></div>
+      </div>
+      <button id="deployBtn" class="primary-btn deploy-btn">▶ Simulate Deployment</button>
+      <div id="deployStatus" class="deploy-status">Ready for deployment.</div>
+    </section>
+
+    <section id="about" class="section about">
+      <div class="about-card reveal">
+        <div class="eyebrow">AWS STATIC HOSTING DEMO</div>
+        <h2>CloudNova</h2>
+        <p>A portfolio-ready static site designed to demonstrate S3 hosting, CloudFront CDN delivery, HTTPS, caching and a production-style deployment workflow.</p>
+        <div class="badges"><span>✓ S3</span><span>✓ CloudFront</span><span>✓ HTTPS</span><span>✓ GitHub Actions Ready</span></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="logo"><span class="logo-mark">☁</span> CloudNova</div>
+    <p>Infrastructure that doesn't get in your way.</p>
+    <span>Built with ♥ on AWS</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
